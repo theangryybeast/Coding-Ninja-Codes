@@ -1,0 +1,14 @@
+#include <set>
+int removeDuplicates(vector<int> &arr, int n) {
+	// Write your code here.
+	set < int > Set;
+  for (int i = 0; i < n; i++) {
+    Set.insert(arr[i]);
+  }
+  int k = Set.size();
+  int j = 0;
+  for (int x: Set) {
+    arr[j++] = x;
+  }
+  return k;
+}
